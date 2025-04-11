@@ -1,6 +1,6 @@
 <template>
 	<div class="bg-[#2C2C2C] flex flex-col w-screen h-screen">
-        <Navigation class="px-32 pt-8" />
+        <Navigation class="px-32 pt-8" @navigation="reload" />
         <div class="flex-1 p-32">
             <div class="flex justify-center w-full container">
                 <GameOver v-if="state.completed.value" :state="state" />
@@ -17,4 +17,9 @@ import GameOver from './GameOverAnimation.vue';
 import GamePlaying from './GamePlaying.vue';
 
 const state = useGameState();
+
+const reload = () => {
+  state.completed.value=false;
+  window.location.reload();
+};
 </script>
