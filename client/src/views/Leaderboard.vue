@@ -1,5 +1,5 @@
 <template>
-  	<div class="bg-[#2C2C2C] flex flex-col gap-11 w-screen h-screen px-32 py-8">
+  	<div class="flex flex-col gap-11 w-full h-full px-32 py-8">
         <Navigation />
       <div class="flex flex-col flex-1 gap-2">
         <h1 class="text-white text-xl font-medium">Vinnertavlen</h1>

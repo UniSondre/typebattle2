@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#2c2c2c] h-screen px-32 py-8 flex flex-col gap-11 overflow-auto">
+  <div class="bg-[#2c2c2c] h-full px-32 py-8 flex flex-col gap-11 overflow-auto">
     <Navigation />
     <div class="flex flex-col flex-1 w-full">
       <Account v-if="session" :session="session" />

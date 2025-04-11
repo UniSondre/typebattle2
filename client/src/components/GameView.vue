@@ -53,7 +53,7 @@ watch(() => wpm.value, (newWpm) => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center h-screen">
+  <div class="flex flex-col items-center justify-center h-full">
     <UBadge>WPM: {{ wpm }}</UBadge>
     <ShuffleWordsButton @shuffleWords="shuffleWords" />
     <WordsToType :words="displayedWords" />

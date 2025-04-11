@@ -22,6 +22,9 @@
                     <span class="text-white">{{ highscore }} wpm</span>
                 </div>
             </div>
+            <div ref="restartRef" class="opacity-0">
+                <UButton class="cursor-pointer bg-[#B82BFF] hover:bg-[#B82BFF]" @click="reload">Prøv igjen</UButton>
+            </div>
         </div>
     </div>
 </template>
@@ -40,6 +43,10 @@ interface Props {
     seconds: number
 }
 const props = defineProps<Props>();
+
+const reload = () => {
+    window.location.reload();
+};
 
 const ranking = ref<number | null>();
 const highscore = ref<number | null>();
@@ -114,6 +121,8 @@ const wpmMessageRef = useTemplateRef<HTMLElement>('wpmMessageRef');
 const rankingRef = useTemplateRef<HTMLElement>('rankingRef');
 const personalRankingRef = useTemplateRef<HTMLElement>('personalRankingRef');
 
+const restartRef = useTemplateRef<HTMLElement>('restartRef');
+
 const quickEase = createSpring({
     mass: 1,
     damping: 20,
@@ -183,5 +192,12 @@ onMounted(() => {
         delay: 600,
     });
 
+    // Fade in the restart button
+    timeline.add(restartRef.value, {
+        opacity: 1,
+        translateY: ['-50%', 0],
+        duration: 200,
+        delay: 600,
+    });
 });
 </script>
