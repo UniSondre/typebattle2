@@ -6,7 +6,9 @@
                 <GameOver v-if="state.completed.value" :state="state" />
                 <GamePlaying v-else :state="state" />
             </div>
-            <UButton class="bg-[#B82BFF] hover:bg-[#B82BFF] h-10 w-[5.4rem]" @click="reload">prøv igjen</UButton>
+            <div v-show="state.completed.value || state.running.value" class="flex justify-center mt-20">
+              <UButton class="bg-[#B82BFF] hover:bg-[#B82BFF] h-10 w-[5.4rem]" @click="reload">prøv igjen</UButton>
+            </div>
         </div>
 	</div>
 </template>
