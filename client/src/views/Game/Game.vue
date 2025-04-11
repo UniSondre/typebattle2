@@ -6,7 +6,7 @@
                 <GameOver v-if="state.completed.value" :state="state" />
                 <GamePlaying v-else :state="state" />
             </div>
-            <UButton class="bg-[#B82BFF] hover:bg-[#B82BFF] h-10 w-min" @click="reload">restart</UButton>
+            <UButton class="bg-[#B82BFF] hover:bg-[#B82BFF] h-10 w-[5.4rem]" @click="reload">prøv igjen</UButton>
         </div>
 	</div>
 </template>
