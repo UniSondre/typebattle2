@@ -1,11 +1,12 @@
 <template>
 	<div class="bg-[#2C2C2C] flex flex-col w-screen h-screen">
-        <Navigation class="px-32 pt-8" @navigation="reload" />
-        <div class="flex-1 p-32">
+        <Navigation class="px-32 pt-8" />
+        <div class="flex flex-col p-32 justify-center">
             <div class="flex justify-center w-full container">
                 <GameOver v-if="state.completed.value" :state="state" />
                 <GamePlaying v-else :state="state" />
             </div>
+            <UButton class="bg-[#B82BFF] hover:bg-[#B82BFF] h-10 w-min" @click="reload">restart</UButton>
         </div>
 	</div>
 </template>
