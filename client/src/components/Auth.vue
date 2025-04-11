@@ -32,7 +32,7 @@ const handleLogin = async () => {
         <span class="text-base text-[#E0E0E0] text-center w-[18.1875rem] mb-[1.25rem]">
           Kom i gang. Lag en bruker og test dine skrive ferdigheter.
         </span>
-        <UFormField label="E-postaddresse" class="flex flex-col space-y-2 mt-4" text="#E0E0E0" required>
+        <UFormField label="E-postaddresse" id="yas" class="flex flex-col space-y-2 mt-4 yas" text="#E0E0E0" required>
           <UInput
             type="email"
             name="email"
@@ -47,7 +47,7 @@ const handleLogin = async () => {
         <UButton 
           type="submit"
           color="primary"
-          class="flex w-[7.6875rem] justify-center mt-4 bg-[#B82BFF] disabled:bg-[#B82BFF] hover:bg-[#B82BFF]"
+          class="flex justify-center mt-4 bg-[#B82BFF] disabled:bg-[#B82BFF] hover:bg-[#B82BFF]"
           @click="handleLogin"
           :disabled="loading"
         >
@@ -57,3 +57,10 @@ const handleLogin = async () => {
     </div>
   </div>
 </template>
+
+<style>
+/* lmao */
+#yas > div > div > label {
+  color: white !important
+}
+</style>
