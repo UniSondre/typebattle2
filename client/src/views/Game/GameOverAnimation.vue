@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center relative h-full w-full">
+    <div class="flex justify-center relative h-full w-full font-mono">
         <div class="absolute flex flex-col justify-start gap-11">
             <span ref="gameOverRef" class="text-[#B82BFF] font-mono text-5xl font-semibold">{{ getRandomCompleteMessage() }}</span>
             <div ref="gameRef" class="flex flex-col justify-start gap-11">
@@ -22,8 +22,11 @@
                     <span class="text-white">{{ highscore }} wpm</span>
                 </div>
             </div>
-            <div ref="restartRef" class="opacity-0">
-                <UButton class="cursor-pointer bg-[#B82BFF] hover:bg-[#B82BFF]" @click="reload">Prøv igjen</UButton>
+            <div ref="restartRef" class="flex flex-col gap-6 opacity-0">
+                <div>
+                    <UButton class="cursor-pointer bg-[#B82BFF] hover:bg-[#B82BFF]" @click="reload">Prøv igjen</UButton>
+                </div>
+                <span class="text-[#B0B0B0] text-xl">{ Ctrl + R }</span>
             </div>
         </div>
     </div>
